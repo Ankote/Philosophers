@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/time.h>
 
 typedef struct s_philos
 {
@@ -14,8 +15,7 @@ typedef struct s_philos
 	int				lft_fork_id;
 	int				rgt_fork_id;
 	int				n_eat;
-	long long		time_init;
-	long long		last_eat;
+	long 		last_eat;
 	struct s_data	*data;
 }				t_philos;
  
@@ -25,6 +25,7 @@ typedef struct s_data
 	int				time_die;
 	int				time_eat;
 	int				time_sleep;
+	long		time_init;
 	t_philos		*philos;
 	pthread_mutex_t	*forks;
 }				t_data;

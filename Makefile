@@ -4,7 +4,7 @@ SRC = philo.c
 
 OBJS = $(SRC:.c=.o)
 
-CFLAGS  = -Wall -Wextra -Werror -fsanitize=address
+CFLAGS  = -Wall -Wextra -Werror
 
 all : $(NAME)
 
