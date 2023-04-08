@@ -4,7 +4,7 @@ SRC = philo.c
 
 OBJS = $(SRC:.c=.o)
 
-CFLAGS  = -Wall -Wextra -Werror
+CFLAGS  = -Wall -Wextra -Werror -fsanitize=address
 
 all : $(NAME)
 
@@ -15,7 +15,7 @@ $(NAME) : $(OBJS)
 
 %.o:%.c
 	@printf "\033[0;33mGenerating philo objects... %-33.33s\r" $@
-	@$(CC)  $(CFLAGS)  -c $<  -o $@
+	@$(CC)  $(CFLAGS) -c $<  -o $@
 
 clean :
 	@echo "\033[0;31m"
