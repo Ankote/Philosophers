@@ -1,10 +1,10 @@
 NAME = philo
 
-SRC = philo.c
+SRC = philo.c time.c events.c
 
 OBJS = $(SRC:.c=.o)
 
-CFLAGS  = -Wall -Wextra -Werror
+CFLAGS  = -Wall -Wextra -Werror #-fsanitize=thread
 
 all : $(NAME)
 
